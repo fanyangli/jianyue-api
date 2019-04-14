@@ -3,6 +3,7 @@ package com.soft1721.jianyue.api.service;
 /**
  * Created by Administrator on 2019/4/8.
  */
+import com.soft1721.jianyue.api.entity.Article;
 import com.soft1721.jianyue.api.entity.Img;
 import com.soft1721.jianyue.api.entity.vo.ArticleVO;
 import org.springframework.stereotype.Component;
@@ -17,4 +18,8 @@ public interface ArticleService {
     ArticleVO getArticleById(int aId);
 
     List<Img> selectImgByaId(int aId);
+
+    void insertArticle(Article article);
+
+    void insertImg(Img img);
 }

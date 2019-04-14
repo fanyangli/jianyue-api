@@ -8,7 +8,6 @@ import java.util.Date;
 @Data
 public class Article {
     private Integer id;
-    private Integer aId;
     private Integer uId;
     private String title;
     private String content;

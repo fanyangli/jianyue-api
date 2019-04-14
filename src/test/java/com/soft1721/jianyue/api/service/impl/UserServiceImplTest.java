@@ -40,8 +40,8 @@ public class UserServiceImplTest {
     @Test
     public void signUp() {
         UserDTO userDTO = new UserDTO();
-        userDTO.setMobile("18761865590");
-        userDTO.setPassword("954763");
+        userDTO.setMobile("15996312228");
+        userDTO.setPassword("111");
         userService.signUp(userDTO);
     }
 }

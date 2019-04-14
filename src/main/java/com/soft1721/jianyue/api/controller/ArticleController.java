@@ -55,4 +55,18 @@ public class ArticleController {
         map.put("comments", comments);
         return ResponseResult.success(map);
     }
+    @PostMapping("/add")
+    public ResponseResult postArticle(@RequestParam("uId") int uId,
+                                      @RequestParam("title") String title,
+                                      @RequestParam("content") String content) {
+        Article article = new Article();
+        article.setUId(uId);
+        article.setTitle(title);
+        article.setContent(content);
+        article.setCreateTime(new Date());
+        articleService.insertArticle(article);
+        System.out.println(article.getId()+"====================================================");
+        //新增文章后，将获取到的自增主键返回给客户端，方便图片地址的写入
+        return ResponseResult.success(article.getId());
+    }
 }

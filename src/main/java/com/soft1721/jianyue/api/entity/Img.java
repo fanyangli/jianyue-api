@@ -10,4 +10,8 @@ public class Img {
     private Integer id;
     private Integer aId;
     private String imgs;
+
+    public void setaId(int aId) {
+        this.aId = aId;
+    }
 }
