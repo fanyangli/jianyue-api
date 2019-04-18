@@ -51,7 +51,7 @@ public class CourseServiceImplTest {
 
     @Test
     public void update() {
-        Course course = courseService.getOne(26L);
+        Course course = courseService.getOne(1122L);
         course.setCover("999.jpg");
         course.setFinished((short) 1);
         courseService.update(course);
